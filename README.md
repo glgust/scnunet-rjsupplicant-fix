@@ -1,4 +1,4 @@
-# 华南师大校园网：锐捷客户端 rjsupplicant 在 Tailscale/WireGuard 虚拟网卡环境下的 SIGSEGV 崩溃分析与修复
+# 华南师范大学校园网：锐捷客户端 rjsupplicant 在 Tailscale/WireGuard 虚拟网卡环境下的 SIGSEGV 崩溃分析与修复
 
 ## 引言
 
@@ -16,6 +16,10 @@
 | 锐捷客户端 | `rjsupplicant`（2014 编译，ELF 64-bit，for GNU/Linux 2.6.9） |
 | Tailscale | v1.98.3 |
 | 校园网认证 | 802.1X PEAP，WAN 口网卡 |
+
+> **关于接口命名：** 本文使用通用名称指代网卡，请根据你的实际环境替换：
+> - `eth0` → 认证网卡（WAN 口，本例实际为 `enp2s0`）
+> - `lan0` → 内网网卡（LAN 口，本例实际为 `enp1s0`）
 
 ## 现象
 
