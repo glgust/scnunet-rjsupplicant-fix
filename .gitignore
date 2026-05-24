@@ -1,0 +1,5 @@
+*.o
+*.so
+*.out
+.DS_Store
+Thumbs.db
